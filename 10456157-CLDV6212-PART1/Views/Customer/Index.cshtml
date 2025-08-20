@@ -1,0 +1,18 @@
+﻿@model List<_10456157_CLDV6212_PART1.Models.CustomerEntity>
+
+<h2>Customer List</h2>
+<table>
+    <tr><th>Name</th><th>Email</th><th>Product</th><th>Price</th></tr>
+    @foreach (var c in Model)
+    {
+        <tr>
+            <td>@c.Name</td>
+            <td>@c.Email</td>
+            <td>@c.Product</td>
+            <td>@c.Price</td>
+        </tr>
+    }
+</table>
+<a href="/Customer/Create">Add Customer</a>
+
+

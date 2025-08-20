@@ -1,0 +1,12 @@
+﻿@model List<string>
+
+<h2>Uploaded Images</h2>
+<ul>
+    @foreach (var file in Model)
+    {
+        <li>@file</li>
+    }
+</ul>
+<a href="/Media/Upload">Upload Image</a>
+
+

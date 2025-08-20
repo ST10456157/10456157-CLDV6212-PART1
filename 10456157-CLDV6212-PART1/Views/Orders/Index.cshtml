@@ -1,0 +1,12 @@
+﻿@model List<string>
+
+<h2>Orders / Queue Messages</h2>
+<ul>
+    @foreach (var msg in Model)
+    {
+        <li>@msg</li>
+    }
+</ul>
+<a href="/Orders/Create">Add Order</a>
+
+
