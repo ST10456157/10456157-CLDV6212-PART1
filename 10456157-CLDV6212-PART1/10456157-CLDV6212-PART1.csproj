@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>_10456157_CLDV6212_PART1</RootNamespace>
+    <UserSecretsId>28e8315a-211d-4f04-8fd5-ba9550a00a84</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

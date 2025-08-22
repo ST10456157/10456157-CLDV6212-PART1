@@ -17,18 +17,18 @@ namespace _10456157_CLDV6212_PART1.Services
             await _queueClient.SendMessageAsync(message);
         }
 
-        public async Task<List<string>> ReceiveMessagesAsync()
+        public async Task<List<string>> GetOrdersAsync()
         {
-            var messages = await _queueClient.ReceiveMessagesAsync(maxMessages: 5);
+            var messages = await _queueClient.PeekMessagesAsync(maxMessages: 32); 
             List<string> results = new();
 
             foreach (var msg in messages.Value)
             {
                 results.Add(msg.MessageText);
-                await _queueClient.DeleteMessageAsync(msg.MessageId, msg.PopReceipt);
             }
 
             return results;
         }
+
     }
 }

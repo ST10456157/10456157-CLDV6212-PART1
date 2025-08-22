@@ -14,9 +14,10 @@ namespace _10456157_CLDV6212_PART1.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var messages = await _queueService.ReceiveMessagesAsync();
+            var messages = await _queueService.GetOrdersAsync(); 
             return View(messages);
         }
+
 
         [HttpGet]
         public IActionResult Create() => View();
